@@ -1,6 +1,7 @@
 
-Here are some guidlines:
+Here are some guidlines.
 
+As pointed out by Charlie: 
 Any multithreading in c inside kdb+ requires kdb+ to be in a multithreaded mode itself, either negative port mode or with slave threads; otherwise ref counts can go wrong.
 The golden rules are that k objects cannot be shared between threads, and k objects must be freed from the threads in which they were allocated.
 
